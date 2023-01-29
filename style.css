@@ -1,0 +1,36 @@
+#container {
+    display: grid;
+    border: 0.5px solid;
+  }
+
+.box {
+    background-color: rgb(255, 255, 255);
+    border: 0.5px dotted;
+    width: 20px;
+    height: 20px;
+}
+
+.box:hover {
+    background-color: rgb(224, 222, 222);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons{
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+}
+
+.btn {
+    height: 25px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
