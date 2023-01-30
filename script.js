@@ -3,6 +3,7 @@ const board = document.getElementById("container");
 const btnWhite = document.createElement("button");
 const btnBlack = document.createElement("button");
 const btnRgb = document.createElement("button");
+const btnRgbView = document.createElement("button");
 const buttonContainer = document.querySelector('buttons');
 let chooseColor = "rgb(177, 112, 171)";
 
@@ -25,6 +26,7 @@ btnWhite.textContent = "White";
 
 btnWhite.addEventListener('click' , () =>{
 chooseColor = `rgb(255, 255, 255)`;
+btnRgbView.style.background = chooseColor;
 })
 
 btn_container.appendChild(btnBlack).classList.add('btn');
@@ -32,9 +34,11 @@ btnBlack.textContent = "Black";
 
 btnBlack.addEventListener('click' , () =>{
     chooseColor = `rgb(0, 0, 0)`;
+    btnRgbView.style.background = chooseColor;
 })
 
 btn_container.appendChild(btnRgb).classList.add('btn');
+btn_container.appendChild(btnRgbView).classList.add('btn_view');
 btnRgb.textContent = "Random RGB";
 
 btnRgb.addEventListener('click' , () =>{
@@ -42,6 +46,7 @@ btnRgb.addEventListener('click' , () =>{
     let B = Math.floor(Math.random() * 255);
     let G = Math.floor(Math.random() * 255);
     chooseColor = `rgb(${R}, ${B}, ${G})`;
+    btnRgbView.style.background = chooseColor;
 })
 
 //Draw
