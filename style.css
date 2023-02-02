@@ -5,7 +5,7 @@
 
 .box {
     background-color: rgb(255, 255, 255);
-    border: 0.5px dotted;
+    /* border: 0.5px dotted; */
     width: 20px;
     height: 20px;
 }
@@ -16,15 +16,17 @@
 
 body {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     font-family: 'Lato';
+}
+
+content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .buttons{
@@ -51,4 +53,17 @@ body {
     height: 30px;
     border-radius: 30px;
     border: 1px solid #c7cac7;
+}
+
+.btn_clear {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border-radius: 8px;
+    border: 1px solid #c7cac7;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 10px;
 }

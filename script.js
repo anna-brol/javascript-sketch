@@ -4,6 +4,8 @@ const btnWhite = document.createElement("button");
 const btnBlack = document.createElement("button");
 const btnRgb = document.createElement("button");
 const btnRgbView = document.createElement("button");
+const btnClear = document.createElement("button");
+const buttonClear = document.querySelector('clear');
 const buttonContainer = document.querySelector('buttons');
 let chooseColor = "rgb(177, 112, 171)";
 
@@ -61,5 +63,18 @@ document.onmouseup = function() {
 board.addEventListener('mouseover', function (m) {
     if (mouseDown) {
         m.target.style.backgroundColor = chooseColor;
+    }
+});
+
+//Clear
+
+
+clear_container.appendChild(btnClear).classList.add('btn_clear');
+btnClear.textContent = "CLEAR";
+
+btnClear.addEventListener('click', function () {
+    let allDivs = document.querySelectorAll(".box");
+    for (let i = 0; i < allDivs.length; i++) {
+        allDivs[i].style.backgroundColor = 'white';
     }
 });
